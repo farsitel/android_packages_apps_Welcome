@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package com.android.protips;
+package com.farsitel.welcome;
 
 import android.app.AlarmManager;
 import android.app.PendingIntent;
@@ -48,13 +48,13 @@ import java.util.regex.Pattern;
 import java.util.Random;
 
 /** Mister Widget appears on your home screen to provide helpful tips. */
-public class ProtipWidget extends AppWidgetProvider {
+public class WelcomeWidget extends AppWidgetProvider {
     public static final String ACTION_NEXT_TIP = "com.android.misterwidget.NEXT_TIP";
     public static final String ACTION_POKE = "com.android.misterwidget.HEE_HEE";
 
     public static final String EXTRA_TIMES = "times";
 
-    public static final String PREFS_NAME = "Protips";
+    public static final String PREFS_NAME = "Welcome";
     public static final String PREFS_TIP_NUMBER = "widget_tip";
 
     private static Random sRNG = new Random();
@@ -75,7 +75,7 @@ public class ProtipWidget extends AppWidgetProvider {
     private void setup(Context context) {
         mContext = context;
         mWidgetManager = AppWidgetManager.getInstance(context);
-        mWidgetIds = mWidgetManager.getAppWidgetIds(new ComponentName(context, ProtipWidget.class));
+        mWidgetIds = mWidgetManager.getAppWidgetIds(new ComponentName(context, WelcomeWidget.class));
 
         SharedPreferences pref = context.getSharedPreferences(PREFS_NAME, 0);
         mMessage = pref.getInt(PREFS_TIP_NUMBER, 0);
@@ -166,14 +166,14 @@ public class ProtipWidget extends AppWidgetProvider {
             context.getPackageName(), R.layout.widget);
 
         // Action for tap on bubble
-        Intent bcast = new Intent(context, ProtipWidget.class);
+        Intent bcast = new Intent(context, WelcomeWidget.class);
         bcast.setAction(ACTION_NEXT_TIP);
         PendingIntent pending = PendingIntent.getBroadcast(
             context, 0, bcast, PendingIntent.FLAG_UPDATE_CURRENT);
         updateViews.setOnClickPendingIntent(R.id.tip_bubble, pending);
 
         // Action for tap on android
-        bcast = new Intent(context, ProtipWidget.class);
+        bcast = new Intent(context, WelcomeWidget.class);
         bcast.setAction(ACTION_POKE);
         bcast.putExtra(EXTRA_TIMES, 1);
         pending = PendingIntent.getBroadcast(
@@ -201,11 +201,11 @@ public class ProtipWidget extends AppWidgetProvider {
                 updateViews.setViewVisibility(R.id.tip_callout, View.GONE);
             }
 
-            updateViews.setTextViewText(R.id.tip_message, 
+            updateViews.setTextViewText(R.id.tip_message,
                 text);
             updateViews.setTextViewText(R.id.tip_header,
                 title);
-            updateViews.setTextViewText(R.id.tip_footer, 
+            updateViews.setTextViewText(R.id.tip_footer,
                 context.getResources().getString(
                     R.string.pager_footer,
                     (1+mMessage), mTips.length));

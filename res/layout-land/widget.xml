@@ -22,6 +22,5 @@
     android:padding="1dip"
     >
 
-    <include layout="@layout/droid" />
     <include layout="@layout/bubble" />
 </RelativeLayout>

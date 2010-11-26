@@ -16,7 +16,7 @@
 
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
     <!-- Name of tips widget (shown in Launcher "add widget" list) -->
-    <string name="widget_name">Home screen tips</string>
+    <string name="widget_name">Welcome</string>
     <!-- Format string for the footer of the tip bubble. Substitutions:
             %1$d - the number of the current tip
             %2$d - the total number of tips

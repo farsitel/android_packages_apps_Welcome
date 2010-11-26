@@ -38,9 +38,12 @@ import android.os.Looper;
 import android.os.Message;
 import android.os.SystemClock;
 import android.text.format.Time;
+import android.text.Html;
 import android.text.Spannable;
 import android.util.Log;
 import android.view.View;
+import android.view.animation.AnimationSet;
+import android.view.animation.RotateAnimation;
 import android.widget.RemoteViews;
 
 import java.util.regex.Matcher;
@@ -50,7 +53,6 @@ import java.util.Random;
 /** Mister Widget appears on your home screen to provide helpful tips. */
 public class WelcomeWidget extends AppWidgetProvider {
     public static final String ACTION_NEXT_TIP = "com.android.misterwidget.NEXT_TIP";
-    public static final String ACTION_POKE = "com.android.misterwidget.HEE_HEE";
 
     public static final String EXTRA_TIMES = "times";
 
@@ -63,7 +65,7 @@ public class WelcomeWidget extends AppWidgetProvider {
     private static final Pattern sDrawableRegex = Pattern.compile(" *@(drawable/[a-z0-9_]+) *");
 
     // initial appearance: eyes closed, no bubble
-    private int mIconRes = R.drawable.droidman_open;
+    private int mIconRes = R.drawable.droidman_down_open;
     private int mMessage = 0;
 
     private AppWidgetManager mWidgetManager = null;
@@ -104,7 +106,7 @@ public class WelcomeWidget extends AppWidgetProvider {
         } catch (InterruptedException ex) {
         }
         mMessage = 0;
-        mIconRes = R.drawable.droidman_open;
+        mIconRes = R.drawable.droidman_down_open;
         refresh();
     }
 
@@ -118,12 +120,10 @@ public class WelcomeWidget extends AppWidgetProvider {
             pref.putInt(PREFS_TIP_NUMBER, mMessage);
             pref.commit();
             refresh();
-        } else if (intent.getAction().equals(ACTION_POKE)) {
-            blink(intent.getIntExtra(EXTRA_TIMES, 1));
-        } else if (intent.getAction().equals(AppWidgetManager.ACTION_APPWIDGET_ENABLED)) {
-            goodmorning();
+//        } else if (intent.getAction().equals(AppWidgetManager.ACTION_APPWIDGET_ENABLED)) {
+//            goodmorning();
         } else {
-            mIconRes = R.drawable.droidman_open;
+//            mIconRes = R.drawable.droidman_down_open;
             refresh();
         }
     }
@@ -133,6 +133,12 @@ public class WelcomeWidget extends AppWidgetProvider {
         for (int i : mWidgetIds) {
             mWidgetManager.updateAppWidget(i, rv);
         }
+        
+        AnimationSet farsiTelLogoAnimation = new AnimationSet(true);
+        RotateAnimation rotate = new RotateAnimation(0, 360, RotateAnimation.RELATIVE_TO_SELF, 0.5f, RotateAnimation.RELATIVE_TO_SELF, 0.5f);
+        rotate.setFillAfter(true);
+        rotate.setDuration(1000);
+        farsiTelLogoAnimation.addAnimation(rotate);
     }
 
     private void setIcon(int resId) {
@@ -148,17 +154,17 @@ public class WelcomeWidget extends AppWidgetProvider {
         // don't blink if no bubble showing or if goodmorning() is happening
         if (mMessage < 0) return;
 
-        setIcon(R.drawable.droidman_closed);
+        setIcon(R.drawable.droidman_down_closed);
         try {
             Thread.sleep(100);
             while (0<--blinks) {
-                setIcon(R.drawable.droidman_open);
+                setIcon(R.drawable.droidman_down_open);
                 Thread.sleep(200);
-                setIcon(R.drawable.droidman_closed);
+                setIcon(R.drawable.droidman_down_closed);
                 Thread.sleep(100);
             }
         } catch (InterruptedException ex) { }
-        setIcon(R.drawable.droidman_open);
+        setIcon(R.drawable.droidman_down_open);
     }
 
     public RemoteViews buildUpdate(Context context) {
@@ -170,16 +176,8 @@ public class WelcomeWidget extends AppWidgetProvider {
         bcast.setAction(ACTION_NEXT_TIP);
         PendingIntent pending = PendingIntent.getBroadcast(
             context, 0, bcast, PendingIntent.FLAG_UPDATE_CURRENT);
-        updateViews.setOnClickPendingIntent(R.id.tip_bubble, pending);
-
-        // Action for tap on android
-        bcast = new Intent(context, WelcomeWidget.class);
-        bcast.setAction(ACTION_POKE);
-        bcast.putExtra(EXTRA_TIMES, 1);
-        pending = PendingIntent.getBroadcast(
-            context, 0, bcast, PendingIntent.FLAG_UPDATE_CURRENT);
-        updateViews.setOnClickPendingIntent(R.id.bugdroid, pending);
-
+        updateViews.setOnClickPendingIntent(R.id.widget, pending);
+        
         // Tip bubble text
         if (mMessage >= 0) {
             String[] parts = sNewlineRegex.split(mTips[mMessage], 2);
@@ -202,7 +200,7 @@ public class WelcomeWidget extends AppWidgetProvider {
             }
 
             updateViews.setTextViewText(R.id.tip_message,
-                text);
+                Html.fromHtml(text));
             updateViews.setTextViewText(R.id.tip_header,
                 title);
             updateViews.setTextViewText(R.id.tip_footer,
@@ -214,7 +212,7 @@ public class WelcomeWidget extends AppWidgetProvider {
             updateViews.setViewVisibility(R.id.tip_bubble, View.INVISIBLE);
         }
 
-        updateViews.setImageViewResource(R.id.bugdroid, mIconRes);
+//        updateViews.setImageViewResource(R.id.bugdroid, mIconRes);
 
         return updateViews;
     }

@@ -25,37 +25,48 @@
          to be displayed to the right of the tip text.
 
          Example for tip #1:
-          _____________________________________________     \_/
-         |                                             |   /._.\
-         |  See all your apps.         [all_apps.png]   > U|   |U
-         |  Touch the Launcher icon.                   |   |___|
-         |_____________________________________________|    U U
+          _____________________________________________
+         |                                             | 
+         |  See all your apps.         [all_apps.png]  |
+         |  Touch the Launcher icon.                   |
+         |_____________________________________________|
     -->
     <string-array name="tips">
+        <item>Android for Iranians\n
+        &lt;br />Welcome! What you have in your hands is an Android device specially customized for Iranians.
+        &lt;br />&lt;br />Tap on this white box for more information. @drawable/android_logo</item>
+
+        <item>FarsiTel\'s Android\n
+        &lt;br />FarsiTel adds to Android what an Iranian wants in Android. Explore your phone to find out and enjoy.
+        &lt;br />&lt;br />Visit us in &lt;a href=\"http://farsitel.com/\">http://farsitel.com&lt;/a>. @drawable/farsitel_logo</item>
+
+        <item>Guaranteed by Persian Telecom\n
+        &lt;br />&lt;br />Some info and a better logo for Persian Telecom. @drawable/persian_telecom_logo</item>
+
         <!-- Tip: Where the launcher icon is and what it does. With icon. -->
         <item>See all your apps.\n
-        Touch the Launcher icon. @drawable/all_apps</item>
+        &lt;br />Touch the Launcher icon. @drawable/all_apps</item>
 
         <!-- Tip: Longpress in Launcher (all apps) to drag apps to the home screen. -->
         <item>Drag apps to your Home screen.\n
-        Touch &amp; hold an app in the Launcher until it vibrates.</item>
+        &lt;br />Touch &amp; hold an app in the Launcher until it vibrates.</item>
 
         <!-- Tip: Longpress to move icons/widgets around. -->
         <item>Rearrange your Home screen.\n
-        Touch &amp; hold an item and when it vibrates, drag it where you want.</item>
+        &lt;br />Touch &amp; hold an item and when it vibrates, drag it where you want.</item>
 
         <!-- Tip: Longpress icons/widgets and drag to trash to remove them. -->
         <item>Remove items.\n
-        Touch &amp; hold an item and when it vibrates, drag it to the Trash icon. @drawable/trash</item>
+        &lt;br />Touch &amp; hold an item and when it vibrates, drag it to the Trash icon. @drawable/trash</item>
 
         <!-- Tip: Swipe to switch workspaces; drag items to move them to other
              workspaces. -->
         <item>Multiple Home screens.\n
-        Swipe left or right to switch. Drag items to other screens.</item>
+        &lt;br />Swipe left or right to switch. Drag items to other screens.</item>
 
         <!-- Tip: Reminder about how to delete widgets, reinforcing that this
              technique can be used to remove the tips widget iteself. -->
         <item>Done with this widget?\n
-        Touch &amp; hold it and when it vibrates, drag it to the Trash icon.</item>
+        &lt;br />Touch &amp; hold it and when it vibrates, drag it to the Trash icon.</item>
     </string-array>
 </resources>

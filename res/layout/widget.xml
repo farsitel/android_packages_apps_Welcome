@@ -14,14 +14,26 @@
      limitations under the License.
 -->
 
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:id="@+id/widget"
+
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="fill_parent"
-    android:layout_height="wrap_content"
-    android:orientation="vertical"
-    android:padding="5dip"
+    android:layout_height="fill_parent"
+    android:paddingLeft="5dip"
+    android:paddingRight="5dip"
+    android:paddingBottom="25dip"
+    android:paddingTop="25dip"
     >
 
-    <include layout="@layout/droid" />
+<RelativeLayout
+    android:id="@+id/widget"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical"
+    android:background="@drawable/widget_background"
+    >
+
     <include layout="@layout/bubble" />
 </RelativeLayout>
+
+</FrameLayout>
+

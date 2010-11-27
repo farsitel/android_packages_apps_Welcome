@@ -33,7 +33,7 @@
     -->
     <string-array name="tips">
         <item>Android for Iranians\n
-        &lt;br />Welcome! What you have in your hands is an Android device specially customized for Iranians.
+        &lt;br />Welcome! The device you have in your hand is powered by an Android specially customized for Iranians.
         &lt;br />&lt;br />Tap on this white box for more information. @drawable/android_logo</item>
 
         <item>FarsiTel\'s Android\n
@@ -50,17 +50,17 @@
         <!-- Tip: Where the launcher icon is and what it does. With icon. -->
         <item>Access your apps.\n
         &lt;br />Touch the Launcher icon to see all of your applications.
-        &lt;br />&lt;br />If you want quick access to an app, touch &amp; hold it until it vibrates, then drag to your Home screen. @drawable/all_apps</item>
+        &lt;br />&lt;br />If you want quick access to an app, touch and hold it until it vibrates, then drag to your Home screen. @drawable/all_apps</item>
 
         <!-- Tip: Longpress to move icons/widgets around. -->
         <item>Rearrange Home screen.\n
-        &lt;br />Touch &amp; hold an item and when it vibrates, drag it where you want, or to the Trash icon to remove it.
+        &lt;br />Touch and hold an item and when it vibrates, drag it where you want, or to the Trash icon to remove it.
         &lt;br />&lt;br />Swipe left or right to switch between Home screens. You can also drag items to other screens. @drawable/trash</item>
 
         <!-- Tip: Reminder about how to delete widgets, reinforcing that this
              technique can be used to remove the tips widget iteself. -->
         <item>Done with this widget?\n
-        &lt;br />Touch &amp; hold it and when it vibrates, drag it to the Trash icon.
+        &lt;br />Touch and hold it and when it vibrates, drag it to the Trash icon.
         &lt;br />&lt;br />Now you can fill your Home screens with what you actually need and use. Enjoy what FarsiTel has prepared for you, and get back to us if you want more!</item>
     </string-array>
 </resources>

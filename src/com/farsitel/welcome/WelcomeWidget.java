@@ -65,7 +65,6 @@ public class WelcomeWidget extends AppWidgetProvider {
     private static final Pattern sDrawableRegex = Pattern.compile(" *@(drawable/[a-z0-9_]+) *");
 
     // initial appearance: eyes closed, no bubble
-    private int mIconRes = R.drawable.droidman_down_open;
     private int mMessage = 0;
 
     private AppWidgetManager mWidgetManager = null;
@@ -92,24 +91,6 @@ public class WelcomeWidget extends AppWidgetProvider {
 
     }
 
-    public void goodmorning() {
-        mMessage = -1;
-        try {
-            setIcon(R.drawable.droidman_down_closed);
-            Thread.sleep(500);
-            setIcon(R.drawable.droidman_down_open);
-            Thread.sleep(200);
-            setIcon(R.drawable.droidman_down_closed);
-            Thread.sleep(100);
-            setIcon(R.drawable.droidman_down_open);
-            Thread.sleep(600);
-        } catch (InterruptedException ex) {
-        }
-        mMessage = 0;
-        mIconRes = R.drawable.droidman_down_open;
-        refresh();
-    }
-
     @Override
     public void onReceive(Context context, Intent intent) {
         setup(context);
@@ -120,10 +101,7 @@ public class WelcomeWidget extends AppWidgetProvider {
             pref.putInt(PREFS_TIP_NUMBER, mMessage);
             pref.commit();
             refresh();
-//        } else if (intent.getAction().equals(AppWidgetManager.ACTION_APPWIDGET_ENABLED)) {
-//            goodmorning();
         } else {
-//            mIconRes = R.drawable.droidman_down_open;
             refresh();
         }
     }
@@ -141,30 +119,8 @@ public class WelcomeWidget extends AppWidgetProvider {
         farsiTelLogoAnimation.addAnimation(rotate);
     }
 
-    private void setIcon(int resId) {
-        mIconRes = resId;
-        refresh();
-    }
-
     private int getNextMessageIndex() {
         return (mMessage + 1) % mTips.length;
-    }
-
-    private void blink(int blinks) {
-        // don't blink if no bubble showing or if goodmorning() is happening
-        if (mMessage < 0) return;
-
-        setIcon(R.drawable.droidman_down_closed);
-        try {
-            Thread.sleep(100);
-            while (0<--blinks) {
-                setIcon(R.drawable.droidman_down_open);
-                Thread.sleep(200);
-                setIcon(R.drawable.droidman_down_closed);
-                Thread.sleep(100);
-            }
-        } catch (InterruptedException ex) { }
-        setIcon(R.drawable.droidman_down_open);
     }
 
     public RemoteViews buildUpdate(Context context) {
@@ -211,8 +167,6 @@ public class WelcomeWidget extends AppWidgetProvider {
         } else {
             updateViews.setViewVisibility(R.id.tip_bubble, View.INVISIBLE);
         }
-
-//        updateViews.setImageViewResource(R.id.bugdroid, mIconRes);
 
         return updateViews;
     }

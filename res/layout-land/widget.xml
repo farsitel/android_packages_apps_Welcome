@@ -14,13 +14,22 @@
      limitations under the License.
 -->
 
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    >
+
+<RelativeLayout
     android:id="@+id/widget"
     android:layout_width="fill_parent"
-    android:layout_height="wrap_content"
+    android:layout_height="fill_parent"
     android:orientation="vertical"
-    android:padding="1dip"
+    android:background="@drawable/widget_background"
     >
 
     <include layout="@layout/bubble" />
 </RelativeLayout>
+
+</FrameLayout>
+

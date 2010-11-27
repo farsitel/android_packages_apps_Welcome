@@ -41,32 +41,26 @@
         &lt;br />&lt;br />Visit us in &lt;a href=\"http://farsitel.com/\">http://farsitel.com&lt;/a>. @drawable/farsitel_logo</item>
 
         <item>Guaranteed by Persian Telecom\n
-        &lt;br />&lt;br />Some info and a better logo for Persian Telecom. @drawable/persian_telecom_logo</item>
+        &lt;br />Some info and a better logo for Persian Telecom. @drawable/persian_telecom_logo</item>
 
         <!-- Tip: Where the launcher icon is and what it does. With icon. -->
-        <item>See all your apps.\n
-        &lt;br />Touch the Launcher icon. @drawable/all_apps</item>
+        <item>Know the buttons.\n
+        &lt;br />Press &lt;b>Home&lt;/b> whenever you want to get back to here. &lt;b>Back&lt;/b> brings you to your previous screen. Use &lt;b>Menu&lt;/b> to access Menu in each screen. &lt;b>Search&lt;/b> is a shortcut for performing a quick search. @drawable/buttons</item>
 
-        <!-- Tip: Longpress in Launcher (all apps) to drag apps to the home screen. -->
-        <item>Drag apps to your Home screen.\n
-        &lt;br />Touch &amp; hold an app in the Launcher until it vibrates.</item>
+        <!-- Tip: Where the launcher icon is and what it does. With icon. -->
+        <item>Access your apps.\n
+        &lt;br />Touch the Launcher icon to see all of your applications.
+        &lt;br />&lt;br />If you want quick access to an app, touch &amp; hold it until it vibrates, then drag to your Home screen. @drawable/all_apps</item>
 
         <!-- Tip: Longpress to move icons/widgets around. -->
-        <item>Rearrange your Home screen.\n
-        &lt;br />Touch &amp; hold an item and when it vibrates, drag it where you want.</item>
-
-        <!-- Tip: Longpress icons/widgets and drag to trash to remove them. -->
-        <item>Remove items.\n
-        &lt;br />Touch &amp; hold an item and when it vibrates, drag it to the Trash icon. @drawable/trash</item>
-
-        <!-- Tip: Swipe to switch workspaces; drag items to move them to other
-             workspaces. -->
-        <item>Multiple Home screens.\n
-        &lt;br />Swipe left or right to switch. Drag items to other screens.</item>
+        <item>Rearrange Home screen.\n
+        &lt;br />Touch &amp; hold an item and when it vibrates, drag it where you want, or to the Trash icon to remove it.
+        &lt;br />&lt;br />Swipe left or right to switch between Home screens. You can also drag items to other screens. @drawable/trash</item>
 
         <!-- Tip: Reminder about how to delete widgets, reinforcing that this
              technique can be used to remove the tips widget iteself. -->
         <item>Done with this widget?\n
-        &lt;br />Touch &amp; hold it and when it vibrates, drag it to the Trash icon.</item>
+        &lt;br />Touch &amp; hold it and when it vibrates, drag it to the Trash icon.
+        &lt;br />&lt;br />Now you can fill your Home screens with what you actually need and use. Enjoy what FarsiTel has prepared for you, and get back to us if you want more!</item>
     </string-array>
 </resources>

@@ -41,7 +41,7 @@
         &lt;br />&lt;br />Visit us in &lt;a href=\"http://farsitel.com/\">http://farsitel.com&lt;/a>. @drawable/farsitel_logo</item>
 
         <item>Guaranteed by Persian Telecom\n
-        &lt;br />Some info and a better logo for Persian Telecom. @drawable/persian_telecom_logo</item>
+        &lt;br />Some info and about Persian Telecom. @drawable/persian_telecom_logo</item>
 
         <!-- Tip: Where the launcher icon is and what it does. With icon. -->
         <item>Know the buttons.\n

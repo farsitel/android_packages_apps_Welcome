@@ -41,7 +41,7 @@
         &lt;br />&lt;br />برای اطلاعات بیشتر به &lt;a href=\"http://farsitel.com/\">http://farsitel.com&lt;/a> سر بزنید. @drawable/farsitel_logo</item>
 
         <item>با گارانتی پرشین تله‌کام\n
-        &lt;br />&lt;br />&lt;br />کمی اطلاعات و یک لوگوی بهتر برای پرشین تله‌کام @drawable/persian_telecom_logo</item>
+        &lt;br />کمی اطلاعات دربارهٔ پرشین تله‌کام @drawable/persian_telecom_logo</item>
 
         <!-- Tip: Where the launcher icon is and what it does. With icon. -->
         <item>آشنایی با دکمه‌ها\n

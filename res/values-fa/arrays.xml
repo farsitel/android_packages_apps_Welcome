@@ -40,9 +40,6 @@
         &lt;br />فارسی‌تل هر چه را که ایرانیان در آندروید می‌خواهند، به آن افزوده است: نمایش فارسی، ترجمه، تقویم ایرانی، و \u2026
         &lt;br />&lt;br />برای اطلاعات بیشتر به &lt;a href=\"http://farsitel.com/\">http://farsitel.com&lt;/a> سر بزنید. @drawable/farsitel_logo</item>
 
-        <item>با گارانتی پرشین تله‌کام\n
-        &lt;br />کمی اطلاعات دربارهٔ پرشین تله‌کام @drawable/persian_telecom_logo</item>
-
         <!-- Tip: Where the launcher icon is and what it does. With icon. -->
         <item>آشنایی با دکمه‌ها\n
         &lt;br />هر وقت خواستید به این صفحه بیایید «خانه» را فشار دهید. «بازگشت» شما را به صفحهٔ قبلی  می‌برد. منوی هر صفحه با دکمهٔ «منو» ظاهر می‌شود. برای جستجوی سریع «جستجو» را فشار دهید. @drawable/buttons</item>

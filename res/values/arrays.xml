@@ -40,9 +40,6 @@
         &lt;br />FarsiTel adds to Android what an Iranian wants in Android. Explore your phone to find out and enjoy.
         &lt;br />&lt;br />Visit us in &lt;a href=\"http://farsitel.com/\">http://farsitel.com&lt;/a>. @drawable/farsitel_logo</item>
 
-        <item>Guaranteed by Persian Telecom\n
-        &lt;br />Some info and about Persian Telecom. @drawable/persian_telecom_logo</item>
-
         <!-- Tip: Where the launcher icon is and what it does. With icon. -->
         <item>Know the buttons.\n
         &lt;br />Press &lt;b>Home&lt;/b> whenever you want to get back to here. &lt;b>Back&lt;/b> brings you to your previous screen. Use &lt;b>Menu&lt;/b> to access Menu in each screen. &lt;b>Search&lt;/b> is a shortcut for performing a quick search. @drawable/buttons</item>

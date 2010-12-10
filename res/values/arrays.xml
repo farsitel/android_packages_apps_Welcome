@@ -36,7 +36,7 @@
         &lt;br />Welcome! The device you have in your hand is powered by an Android specially customized for Iranians.
         &lt;br />&lt;br />Tap on this white box for more information. @drawable/android_logo</item>
 
-        <item>FarsiTel\'s Android\n
+        <item>FarsiTel for You\n
         &lt;br />FarsiTel adds to Android what an Iranian wants in Android. Explore your phone to find out and enjoy.
         &lt;br />&lt;br />Visit us in &lt;a href=\"http://farsitel.com/\">http://farsitel.com&lt;/a>. @drawable/farsitel_logo</item>
 
@@ -54,10 +54,14 @@
         &lt;br />Touch and hold an item and when it vibrates, drag it where you want, or to the Trash icon to remove it.
         &lt;br />&lt;br />Swipe left or right to switch between Home screens. You can also drag items to other screens. @drawable/trash</item>
 
+        <item>Contact Us\n
+        &lt;br />Help us in achieving a mobile operating system for Iranians by telling us what you need, and reporting bugs.
+        &lt;br />&lt;br />We're waiting for you: support@farsitel.com.</item>
+
         <!-- Tip: Reminder about how to delete widgets, reinforcing that this
              technique can be used to remove the tips widget iteself. -->
         <item>Done with this widget?\n
         &lt;br />Touch and hold it and when it vibrates, drag it to the Trash icon.
-        &lt;br />&lt;br />Now you can fill your Home screens with what you actually need and use. Enjoy what FarsiTel has prepared for you, and get back to us if you want more!</item>
+        &lt;br />&lt;br />Now you can fill your Home screens with what you actually need and use. Enjoy what FarsiTel has prepared for you.</item>
     </string-array>
 </resources>

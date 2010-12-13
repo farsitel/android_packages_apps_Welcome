@@ -56,7 +56,7 @@
 
         <item>Contact Us\n
         &lt;br />Help us in achieving a mobile operating system for Iranians by telling us what you need, and reporting bugs.
-        &lt;br />&lt;br />We're waiting for you: support@farsitel.com.</item>
+        &lt;br />&lt;br />We\'re waiting for you: &lt;a href=\"mailto:support@farsitel.com\">support@farsitel.com&lt;/a>.</item>
 
         <!-- Tip: Reminder about how to delete widgets, reinforcing that this
              technique can be used to remove the tips widget iteself. -->
